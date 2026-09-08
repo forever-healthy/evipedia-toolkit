@@ -20,7 +20,7 @@ All content is licensed under [CC BY 4.0](https://creativecommons.org/licenses/b
 * **I want Evipedia on my own website** → the [JavaScript widget](#javascript-widget) — one script tag
 * **I want to query the data myself** → the [HTTP API](#http-api) — every review as Markdown or JSON
 * **I want the whole corpus** → the [full corpus](#full-corpus) as JSONL — the entire library in one file
-* **I want to make my own reviews** → the [AI4L framework](#ai4l-framework) — the open framework Evipedia itself runs on
+* **I want to make my own reviews** → the [AI4L framework](#ai4l-framework) — the open framework Evipedia runs on
 
 
 ---
