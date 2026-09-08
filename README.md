@@ -13,7 +13,7 @@ Everything Evipedia knows is open to build on. No API keys, no sign-up, no SDK �
 All content is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): use it freely, credit evipedia.ai, and link back to a review where practical.
 
 
-### Start Here
+## Start Here
 
 * **I want Evipedia in my browser** → the [browser extension](#browser-extension)
 * **I want my AI agent to use Evipedia** → the [MCP server](#mcp-server), [AI plugin](#ai-plugin), [Grok Bot](#grok-bot), or [Custom GPT](#custom-gpt)
@@ -25,7 +25,7 @@ All content is licensed under [CC BY 4.0](https://creativecommons.org/licenses/b
 ---
 
 
-### Browser Extension
+## Browser Extension
 
 Brings Evipedia hover cards to every site you visit, and turns supplement labels and ingredient lists into links to the evidence.
 
@@ -35,7 +35,7 @@ Brings Evipedia hover cards to every site you visit, and turns supplement labels
 ---
 
 
-### MCP Server
+## MCP Server
 
 Connects any [Model Context Protocol](https://modelcontextprotocol.io) client — Claude, Cursor, Grok, and others — straight to evipedia.ai. Your agent can search reviews, read conclusions or full Markdown, pull structured medical metadata, and suggest new interventions. No API key.
 
@@ -46,7 +46,7 @@ Connects any [Model Context Protocol](https://modelcontextprotocol.io) client �
 [Source](https://github.com/forever-healthy/evipedia-mcp) · [npm](https://www.npmjs.com/package/evipedia-mcp) · [Local install & all clients](https://evipedia.ai/integration#evipedia-mcp-server)
 
 
-### AI Plugin
+## AI Plugin
 
 The fastest route for Claude and Grok Build users — wires in the MCP server plus a `/demo` skill in one install, from the Forever Healthy plugin marketplace.
 
@@ -58,7 +58,7 @@ The fastest route for Claude and Grok Build users — wires in the MCP server pl
 [Marketplace](https://github.com/forever-healthy/fh-plugins) · [Claude Desktop & Grok Build steps](https://evipedia.ai/integration#evipedia-ai-plugin)
 
 
-### Grok Bot
+## Grok Bot
 
 Turns Grok into a specialized assistant giving evidence-based second opinions, grounded in the Evipedia catalogue and the AI4L persona. Set up by pointing a new bot at one URL.
 
@@ -69,7 +69,7 @@ Set yourself up from https://evipedia.ai/grokbot.md
 [Details](https://evipedia.ai/grokbot)
 
 
-### Custom GPT
+## Custom GPT
 
 The same evidence inside ChatGPT with zero setup — a wrapper over the public API, no install and no key.
 
@@ -78,7 +78,7 @@ The same evidence inside ChatGPT with zero setup — a wrapper over the public A
 
 ---
 
-### JavaScript Widget
+## JavaScript Widget
 
 Highlights intervention names on any web page and shows an evidence-review hover card. One script tag, no build step, no data of its own — it reads from evipedia.ai.
 
@@ -89,7 +89,7 @@ Highlights intervention names on any web page and shows an evidence-review hover
 
 [Source & demo](https://github.com/forever-healthy/evipedia-widget) · [Full options](https://evipedia.ai/api#website-integration)
 
-### HTTP API
+## HTTP API
 
 Every endpoint is a plain `GET` with open CORS (`Access-Control-Allow-Origin: *`), so browser-side code can fetch it directly. Replace `{permalink}` with any review's short URL, e.g. `rapamycin`.
 
@@ -116,7 +116,7 @@ Full reference, with the reasoning behind each format: [the API page](https://ev
 
 ---
 
-### Open Source
+## Open Source
 
 Everything we build on top of Evipedia is public. Issues and pull requests welcome.
 
@@ -129,13 +129,13 @@ Everything we build on top of Evipedia is public. Issues and pull requests welco
 
 ---
 
-### Crawlers & Agents Welcome
+## Crawlers & Agents Welcome
 
 Evipedia places no barriers to automated access. Our crawler policy is fully open — every agent and crawler is welcome, whether it's an AI assistant, a search engine, or a research tool. No special arrangements, no negotiated access, no robots.txt games.
 
 
 ---
 
-### Limitations
+## Limitations
 
 Please be aware of the "[Limitations of Evipedia, AI4L & AI](https://evipedia.ai/disclaimer)"
