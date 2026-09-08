@@ -2,7 +2,7 @@
 [![Content CC BY 4.0](https://img.shields.io/badge/Content-CC_BY_4.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
 ![evipedia.ai](./docs/evipedia-header.png)
 
-# Build with Evipedia
+# Evipedia Toolkit
 
 [Evipedia](https://evipedia.ai) is a comprehensive, continuously updated online encyclopedia that provides much-needed, accurate, and up-to-date information on a wide range of health and longevity-related interventions.
 
