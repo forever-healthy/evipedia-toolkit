@@ -15,26 +15,24 @@ All content is licensed under [CC BY 4.0](https://creativecommons.org/licenses/b
 
 ### Start Here
 
-* **I want Evipedia on my own website** → the [JavaScript widget](#javascript-widget) — one script tag
-* **I want my AI agent to use Evipedia** → the [MCP server](#mcp-server), the [AI plugin](#ai-plugin), or [Grok Bot](#grok-bot) 
 * **I want Evipedia in my browser** → the [browser extension](#browser-extension)
-* **I want to query the data myself** → the [HTTP API](#api) — every review as Markdown or JSON
-* **I want the whole corpus** → the [full corpus](#api) as JSONL — the entire library in one file
+* **I want my AI agent to use Evipedia** → the [MCP server](#mcp-server), [AI plugin](#ai-plugin), [Grok Bot](#grok-bot), or [Custom GPT](#custom-gpt)
+* **I want Evipedia on my own website** → the [JavaScript widget](#javascript-widget) — one script tag
+* **I want to query the data myself** → the [HTTP API](#http-api) — every review as Markdown or JSON
+* **I want the whole corpus** → the [full corpus](#http-api) as JSONL — the entire library in one file
 
 
 ---
 
 
-### JavaScript Widget
+### Browser Extension
 
-Highlights intervention names on any web page and shows an evidence-review hover card. One script tag, no build step, no data of its own — it reads from evipedia.ai.
+Brings Evipedia hover cards to every site you visit, and turns supplement labels and ingredient lists into links to the evidence.
 
-```html
-<script src="https://evipedia.ai/widget.js"></script>
-<script>evipedia.init()</script>
-```
+[Install & details](https://evipedia.ai/extension) · [Source](https://github.com/forever-healthy/evipedia-extension)
 
-[Source & demo](https://github.com/forever-healthy/evipedia-widget) · [Full options](https://evipedia.ai/api#website-integration)
+
+---
 
 
 ### MCP Server
@@ -60,13 +58,6 @@ The fastest route for Claude and Grok Build users — wires in the MCP server pl
 [Marketplace](https://github.com/forever-healthy/fh-plugins) · [Claude Desktop & Grok Build steps](https://evipedia.ai/integration#evipedia-ai-plugin)
 
 
-### Browser Extension
-
-Brings the same hover cards to every site you visit, and turns supplement labels and ingredient lists into links to the evidence.
-
-[Install & details](https://evipedia.ai/extension) · [Source](https://github.com/forever-healthy/evipedia-extension)
-
-
 ### Grok Bot
 
 Turns Grok into a specialized assistant giving evidence-based second opinions, grounded in the Evipedia catalogue and the AI4L persona. Set up by pointing a new bot at one URL.
@@ -87,7 +78,18 @@ The same evidence inside ChatGPT with zero setup — a wrapper over the public A
 
 ---
 
-### API
+### JavaScript Widget
+
+Highlights intervention names on any web page and shows an evidence-review hover card. One script tag, no build step, no data of its own — it reads from evipedia.ai.
+
+```html
+<script src="https://evipedia.ai/widget.js"></script>
+<script>evipedia.init()</script>
+```
+
+[Source & demo](https://github.com/forever-healthy/evipedia-widget) · [Full options](https://evipedia.ai/api#website-integration)
+
+### HTTP API
 
 Every endpoint is a plain `GET` with open CORS (`Access-Control-Allow-Origin: *`), so browser-side code can fetch it directly. Replace `{permalink}` with any review's short URL, e.g. `rapamycin`.
 
