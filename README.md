@@ -19,7 +19,8 @@ All content is licensed under [CC BY 4.0](https://creativecommons.org/licenses/b
 * **I want my AI agent to use Evipedia** → the [MCP server](#mcp-server), [AI plugin](#ai-plugin), [Grok Bot](#grok-bot), or [Custom GPT](#custom-gpt)
 * **I want Evipedia on my own website** → the [JavaScript widget](#javascript-widget) — one script tag
 * **I want to query the data myself** → the [HTTP API](#http-api) — every review as Markdown or JSON
-* **I want the whole corpus** → the [full corpus](#http-api) as JSONL — the entire library in one file
+* **I want the whole corpus** → the [full corpus](#full-corpus) as JSONL — the entire library in one file
+* **I want to make my own reviews** → the [AI4L framework](#ai4l-framework) — the open framework Evipedia itself runs on
 
 
 ---
@@ -102,7 +103,6 @@ Straight and simple: No API keys, no sign-up, every endpoint is a plain `GET` wi
 | `/reviews.json` | The full catalogue — name, synonyms, category, permalink, conclusion | [`/reviews.json`](https://evipedia.ai/reviews.json) |
 | `/search.json` | Search index, one entry per review; resolves brand names, synonyms and drug classes | [`/search.json`](https://evipedia.ai/search.json) |
 | `mcp.evipedia.ai/search?q=` | Hosted search — ranked matches without running the query yourself (60 req/min per IP) | [`?q=rapamycin`](https://mcp.evipedia.ai/search?q=rapamycin) |
-| `/evipedia-corpus.jsonl` | The entire library, one JSON object per line with full Markdown (~25 MB) | [`/evipedia-corpus.jsonl`](https://evipedia.ai/evipedia-corpus.jsonl) |
 | `/updates.json` | Every review newest first, each flagged `new` or `updated` | [`/updates.json`](https://evipedia.ai/updates.json) |
 | `/feed.xml` · `/feed-new.xml` | RSS — new and refreshed reviews, or newly published only | [`/feed.xml`](https://evipedia.ai/feed.xml) · [`/feed-new.xml`](https://evipedia.ai/feed-new.xml) |
 | `/llms.txt` | Machine-readable signpost to everything above, for agents | [`/llms.txt`](https://evipedia.ai/llms.txt) |
@@ -112,6 +112,24 @@ Straight and simple: No API keys, no sign-up, every endpoint is a plain `GET` wi
 Every review page also carries [schema.org](https://schema.org/MedicalWebPage) `MedicalWebPage` JSON-LD, including primary-source citations as structured `ScholarlyArticle` / `MedicalStudy` entries — so an agent can traverse straight to the underlying evidence without scraping prose.
 
 Full reference, with the reasoning behind each format: [the API page](https://evipedia.ai/api).
+
+
+---
+
+## Full Corpus
+
+[`/evipedia-corpus.jsonl`](https://evipedia.ai/evipedia-corpus.jsonl) is the entire library in a single file — one JSON object per line per review, each with its metadata (topic, URL, category, dates, synonyms, conclusion, citations) and the full Markdown. One request pulls everything (~25 MB); it's newline-delimited, so you can stream it line by line rather than loading it whole. Ideal for datasets, RAG pipelines, and AI training.
+
+
+---
+
+## AI4L Framework
+
+Evipedia is built on [AI4L](https://github.com/forever-healthy/AI4L) — our open framework that enables anyone to generate high-quality, evidence-based reviews of health and longevity interventions with frontier AI models. At its core is "[Audit-Driven Prompting](https://github.com/forever-healthy/AI4L#audit-driven-prompting)", our approach to producing hallucination-free, accurate, and well-structured reviews. Every review on evipedia.ai is produced this way.
+
+Run it yourself on any intervention we haven't covered, or use [`/persona.md`](https://evipedia.ai/persona.md) to hold conversations in the same style.
+
+[Source & getting started](https://github.com/forever-healthy/AI4L) · [Examples](https://github.com/forever-healthy/AI4L/tree/main/examples) · [Discussions](https://github.com/forever-healthy/AI4L/discussions)
 
 
 ---
