@@ -8,7 +8,7 @@
 
 We build it as a backbone tool for the whole longevity and rejuvenation community. It will always be free, and we actively encourage and support its use in any way and on any project that helps people live longer, healthier lives.
 
-Everything Evipedia knows is open to build on. No API keys, no sign-up, no SDK — plain HTTP, open CORS, and a ready-made tool for every common way of using it.
+Everything Evipedia knows is open to build on, with ready-made tools for every common way of using it.
 
 All content is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): use it freely, credit evipedia.ai, and link back to a review where practical.
 
@@ -91,7 +91,7 @@ Highlights intervention names on any web page and shows an evidence-review hover
 
 ## HTTP API
 
-Every endpoint is a plain `GET` with open CORS (`Access-Control-Allow-Origin: *`), so browser-side code can fetch it directly. Replace `{permalink}` with any review's short URL, e.g. `rapamycin`.
+Straight and simple: No API keys, no sign-up, every endpoint is a plain `GET` with open CORS (`Access-Control-Allow-Origin: *`), so browser-side code can fetch it directly. Replace `{permalink}` with any review's short URL, e.g. `rapamycin`.
 
 | Endpoint | What you get | Example |
 |---|---|---|
