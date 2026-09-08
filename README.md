@@ -19,7 +19,7 @@ All content is licensed under [CC BY 4.0](https://creativecommons.org/licenses/b
 * **I want my AI agent to use Evipedia** → the [MCP server](#mcp-server), the [AI plugin](#ai-plugin), or [Grok Bot](#grok-bot) 
 * **I want Evipedia in my browser** → the [browser extension](#browser-extension)
 * **I want to query the data myself** → the [HTTP API](#api) — every review as Markdown or JSON
-* **I want the whole corpus** → the [full corpus](#api) as JSONL, or the Hugging Face dataset
+* **I want the whole corpus** → the [full corpus](#api) as JSONL — the entire library in one file
 
 
 ---
@@ -101,7 +101,6 @@ Every endpoint is a plain `GET` with open CORS (`Access-Control-Allow-Origin: *`
 | `/search.json` | Search index, one entry per review; resolves brand names, synonyms and drug classes | [`/search.json`](https://evipedia.ai/search.json) |
 | `mcp.evipedia.ai/search?q=` | Hosted search — ranked matches without running the query yourself (60 req/min per IP) | [`?q=rapamycin`](https://mcp.evipedia.ai/search?q=rapamycin) |
 | `/evipedia-corpus.jsonl` | The entire library, one JSON object per line with full Markdown (~25 MB) | [`/evipedia-corpus.jsonl`](https://evipedia.ai/evipedia-corpus.jsonl) |
-| Hugging Face dataset | The same corpus, published daily, ready for ML and RAG pipelines | [`evipedia-reviews`](https://huggingface.co/datasets/forever-healthy/evipedia-reviews) |
 | `/updates.json` | Every review newest first, each flagged `new` or `updated` | [`/updates.json`](https://evipedia.ai/updates.json) |
 | `/feed.xml` · `/feed-new.xml` | RSS — new and refreshed reviews, or newly published only | [`/feed.xml`](https://evipedia.ai/feed.xml) · [`/feed-new.xml`](https://evipedia.ai/feed-new.xml) |
 | `/llms.txt` | Machine-readable signpost to everything above, for agents | [`/llms.txt`](https://evipedia.ai/llms.txt) |
