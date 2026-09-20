@@ -102,7 +102,7 @@ Straight and simple: No API keys, no sign-up, every endpoint is a plain `GET` wi
 | `/{permalink}.meta.json` | Dates and primary-source citations with PMIDs, flat JSON | [`/rapamycin.meta.json`](https://evipedia.ai/rapamycin.meta.json) |
 | `/reviews.json` | The full catalogue — name, synonyms, category, permalink, conclusion | [`/reviews.json`](https://evipedia.ai/reviews.json) |
 | `/search.json` | Search index, one entry per review; resolves brand names, synonyms and drug classes | [`/search.json`](https://evipedia.ai/search.json) |
-| `/categories.json` | The catalogue's sections — label, page, review count, and the wording people use for each | [`/categories.json`](https://evipedia.ai/categories.json) |
+| `/categories.json` | The catalogue's sections — name, page, review count, and the wording people use for each | [`/categories.json`](https://evipedia.ai/categories.json) |
 | `mcp.evipedia.ai/search?q=` | Hosted search — ranked matches without running the query yourself (60 req/min per IP) | [`?q=rapamycin`](https://mcp.evipedia.ai/search?q=rapamycin) |
 | `/updates.json` | Every review newest first, each flagged `new` or `updated` | [`/updates.json`](https://evipedia.ai/updates.json) |
 | `/feed.xml` · `/feed-new.xml` | RSS — new and refreshed reviews, or newly published only | [`/feed.xml`](https://evipedia.ai/feed.xml) · [`/feed-new.xml`](https://evipedia.ai/feed-new.xml) |
