@@ -16,7 +16,7 @@ All content is licensed under [CC BY 4.0](https://creativecommons.org/licenses/b
 ## Start Here
 
 * **I want Evipedia in my browser** → the [browser extension](#browser-extension)
-* **I want my AI agent to use Evipedia** → the [MCP server](#mcp-server), [AI plugin](#ai-plugin), [Grok Bot](#grok-bot), or [Custom GPT](#custom-gpt)
+* **I want my AI agent to use Evipedia** → the [MCP server](#mcp-server), [AI plugin](#ai-plugin), or [Grok Bot](#grok-bot)
 * **I want Evipedia on my own website** → the [JavaScript widget](#javascript-widget) — one script tag
 * **I want to query the data myself** → the [HTTP API](#http-api) — every review as Markdown or JSON
 * **I want the whole corpus** → the [full corpus](#full-corpus) as JSONL — the entire library in one file
@@ -68,13 +68,6 @@ Set yourself up from https://evipedia.ai/grokbot.md
 ```
 
 [Details](https://evipedia.ai/grokbot)
-
-
-## Custom GPT
-
-The same evidence inside ChatGPT with zero setup — a wrapper over the public API, no install and no key.
-
-[Open in ChatGPT](https://chatgpt.com/g/g-6a58ce5b317481919396d0a558a4c031-evipedia) · [Details](https://evipedia.ai/integration#evipedia-custom-gpt)
 
 
 ---
