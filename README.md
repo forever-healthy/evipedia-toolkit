@@ -92,6 +92,7 @@ Straight and simple: No API keys, no sign-up, every endpoint is a plain `GET` wi
 | `/{permalink}` | The review page — a short, stable URL that never changes | [`/rapamycin`](https://evipedia.ai/rapamycin) |
 | `/{permalink}_er#{anchor}` | A fixed section of any review; anchors are identical across the catalogue | [`/rapamycin_er#conclusion`](https://evipedia.ai/rapamycin_er#conclusion) |
 | `/{permalink}.md` | The complete review as raw Markdown, no HTML to parse | [`/rapamycin.md`](https://evipedia.ai/rapamycin.md) |
+| `/{permalink}_er_qa.md` | The review's quality-assurance audit as raw Markdown | [`/rapamycin_er_qa.md`](https://evipedia.ai/rapamycin_er_qa.md) |
 | `/{permalink}.meta.json` | Dates and primary-source citations with PMIDs, flat JSON | [`/rapamycin.meta.json`](https://evipedia.ai/rapamycin.meta.json) |
 | `/reviews.json` | The full catalogue — name, synonyms, category, permalink, conclusion | [`/reviews.json`](https://evipedia.ai/reviews.json) |
 | `/search.json` | Search index, one entry per review; resolves brand names, synonyms and drug classes | [`/search.json`](https://evipedia.ai/search.json) |
