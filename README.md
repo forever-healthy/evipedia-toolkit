@@ -8,7 +8,7 @@
 
 We build it as a backbone tool for the whole longevity and rejuvenation community. It will always be free, and we actively encourage and support its use in any way and on any project that helps people live longer, healthier lives.
 
-Everything Evipedia knows is open to build on, with ready-made tools for every common way of using it.
+Everything Evipedia knows is open to build on, with ready-made tools for every common use case.
 
 All content is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): use it freely, credit evipedia.ai, and link back to a review where practical.
 
@@ -16,10 +16,10 @@ All content is licensed under [CC BY 4.0](https://creativecommons.org/licenses/b
 ## Start Here
 
 * **I want Evipedia in my browser** → the [browser extension](#browser-extension)
-* **I want my AI agent to use Evipedia** → the [MCP server](#mcp-server), [AI plugin](#ai-plugin), or [Grok Bot](#grok-bot)
+* **I want my AI agent to use Evipedia** → [AI Integration](https://evipedia.ai/integration), the [AI plugin](#ai-plugin), or [Grok Bot](#grok-bot)
 * **I want Evipedia on my own website** → the [JavaScript widget](#javascript-widget) — one script tag
 * **I want to query the data myself** → the [HTTP API](#http-api) — every review as Markdown or JSON
-* **I want the whole corpus** → the [full corpus](#full-corpus) as JSONL — the entire library in one file
+* **I want the whole corpus** → the entire library in one file, either [via theAPI](#full-corpus) as JSONL — , or on [Hugging Face](https://huggingface.co/datasets/forever-healthy/evipedia-reviews)
 * **I want to make my own reviews** → the [AI4L framework](#ai4l-framework) — the open framework Evipedia runs on
 
 
@@ -49,7 +49,7 @@ Connects any [Model Context Protocol](https://modelcontextprotocol.io) client �
 
 ## AI Plugin
 
-The fastest route for Claude and Grok Build users — wires in the MCP server plus a `/demo` skill in one install, from the Forever Healthy plugin marketplace.
+The fastest route for Claude and Grok Build users — wires in the MCP server plus a `/demo` skill in one install from the Forever Healthy plugin marketplace.
 
 ```
 /plugin marketplace add forever-healthy/fh-plugins
@@ -61,7 +61,7 @@ The fastest route for Claude and Grok Build users — wires in the MCP server pl
 
 ## Grok Bot
 
-Turns Grok into a specialized assistant giving evidence-based second opinions, grounded in the Evipedia catalogue and the AI4L persona. Set up by pointing a new bot at one URL.
+Turns Grok into a specialized assistant giving evidence-based second opinions, grounded in the Evipedia catalog and the AI4L persona. Set up by pointing a new bot at one URL.
 
 ```
 Set yourself up from https://evipedia.ai/grokbot.md
@@ -85,7 +85,7 @@ Highlights intervention names on any web page and shows an evidence-review hover
 
 ## HTTP API
 
-Straight and simple: No API keys, no sign-up, every endpoint is a plain `GET` with open CORS (`Access-Control-Allow-Origin: *`), so browser-side code can fetch it directly. Replace `{permalink}` with any review's short URL, e.g. `rapamycin`.
+Straight and simple: No API keys, no sign-up, every endpoint is a plain `GET` with open CORS (`Access-Control-Allow-Origin: *`), so browser-side code can fetch it directly. Replace `{permalink}` with any review's short URL, e.g., `rapamycin`.
 
 | Endpoint | What you get | Example |
 |---|---|---|
@@ -94,9 +94,9 @@ Straight and simple: No API keys, no sign-up, every endpoint is a plain `GET` wi
 | `/{permalink}.md` | The complete review as raw Markdown, no HTML to parse | [`/rapamycin.md`](https://evipedia.ai/rapamycin.md) |
 | `/{permalink}_er_qa.md` | The review's quality-assurance audit as raw Markdown | [`/rapamycin_er_qa.md`](https://evipedia.ai/rapamycin_er_qa.md) |
 | `/{permalink}.meta.json` | Dates and primary-source citations with PMIDs, flat JSON | [`/rapamycin.meta.json`](https://evipedia.ai/rapamycin.meta.json) |
-| `/reviews.json` | The full catalogue — name, synonyms, category, permalink, conclusion | [`/reviews.json`](https://evipedia.ai/reviews.json) |
+| `/reviews.json` | The full catalog — name, synonyms, category, permalink, conclusion | [`/reviews.json`](https://evipedia.ai/reviews.json) |
 | `/search.json` | Search index, one entry per review; resolves brand names, synonyms and drug classes | [`/search.json`](https://evipedia.ai/search.json) |
-| `/categories.json` | The catalogue's sections — name, page, review count, and the wording people use for each | [`/categories.json`](https://evipedia.ai/categories.json) |
+| `/categories.json` | The catalog's sections — name, page, review count, and the wording people use for each | [`/categories.json`](https://evipedia.ai/categories.json) |
 | `mcp.evipedia.ai/search?q=` | Hosted search — ranked matches without running the query yourself (60 req/min per IP) | [`?q=rapamycin`](https://mcp.evipedia.ai/search?q=rapamycin) |
 | `/updates.json` | Every review newest first, each flagged `new` or `updated` | [`/updates.json`](https://evipedia.ai/updates.json) |
 | `/feed.xml` · `/feed-new.xml` | RSS — new and refreshed reviews, or newly published only | [`/feed.xml`](https://evipedia.ai/feed.xml) · [`/feed-new.xml`](https://evipedia.ai/feed-new.xml) |
@@ -113,14 +113,14 @@ Full reference, with the reasoning behind each format: [the API page](https://ev
 
 ## Full Corpus
 
-[`/evipedia-corpus.jsonl`](https://evipedia.ai/evipedia-corpus.jsonl) is the entire library in a single file — one JSON object per line per review, each with its metadata (topic, URL, category, dates, synonyms, conclusion, citations) and the full Markdown. One request pulls everything (~25 MB); it's newline-delimited, so you can stream it line by line rather than loading it whole. Ideal for datasets, RAG pipelines, and AI training.
+[`/evipedia-corpus.jsonl`](https://evipedia.ai/evipedia-corpus.jsonl) is the entire library in a single file — one JSON object per line per review, each with its metadata (topic, URL, category, dates, synonyms, conclusion, citations) and the full Markdown. One request pulls everything (~25 MB); it's newline-delimited, so you can stream it line by line instead of loading it all at once. Ideal for datasets, RAG pipelines, and AI training.
 
 
 ---
 
 ## AI4L Framework
 
-Evipedia is built on [AI4L](https://github.com/forever-healthy/AI4L) — our open framework that enables anyone to generate high-quality, evidence-based reviews of health and longevity interventions with frontier AI models. At its core is "[Audit-Driven Prompting](https://github.com/forever-healthy/AI4L#audit-driven-prompting)", our approach to producing hallucination-free, accurate, and well-structured reviews. Every review on evipedia.ai is produced this way.
+Evipedia is built on [AI4L](https://github.com/forever-healthy/AI4L) — our open framework that enables anyone to generate high-quality, evidence-based reviews of health and longevity interventions with frontier AI models. At its core is "[Audit-Driven Prompting](https://github.com/forever-healthy/AI4L#audit-driven-prompting)", our approach to producing hallucination-free, accurate, and well-structured reviews. We produce every review on evipedia.ai this way.
 
 Run it yourself on any intervention we haven't covered, or use [`/persona.md`](https://evipedia.ai/persona.md) to hold conversations in the same style.
 
