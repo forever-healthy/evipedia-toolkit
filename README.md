@@ -19,7 +19,7 @@ All content is licensed under [CC BY 4.0](https://creativecommons.org/licenses/b
 * **I want my AI agent to use Evipedia** → [AI Integration](/integration), the [MCP Server](#mcp-server), the [AI plugin](#ai-plugin), or [Grok Bot](#grok-bot)
 * **I want Evipedia on my own website** → the [JavaScript widget](#javascript-widget) — one script tag
 * **I want to query the data myself** → the [HTTP API](#http-api) — every review as Markdown or JSON
-* **I want the whole corpus** → the entire library in one file, either [via theAPI](#full-corpus) as JSONL — , or on [Hugging Face](https://huggingface.co/datasets/forever-healthy/evipedia-reviews)
+* **I want the whole corpus** → either [via theAPI](#full-corpus) as JSONL — , or on [Hugging Face](https://huggingface.co/datasets/forever-healthy)
 * **I want to make my own reviews** → the [AI4L framework](#ai4l-framework) — the open framework Evipedia runs on
 
 
